@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Item List</title>
+<title>Western Store</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
     <?php
@@ -23,7 +22,7 @@ if (isset($_POST['b1'])) {
     //  require_once('db_fns.php');
     echo "This is Button1 that is selected";
 
-    $sql    = "SELECT id, itemName, price, department FROM inventory";
+    $sql    = "SELECT id, itemName, price, department FROM inventory WHERE id = 1";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
@@ -44,5 +43,8 @@ if (isset($_POST['b2'])) {
 }
 
 ?>
+
+
+
 </body>
 </html>
