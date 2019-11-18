@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<html>
+   <head>
+      <meta charset = "utf-8">
+      <title>hunto</title>
+   </head>
+   <style>
+     body {
+     background-image: url("background.jpeg");
+     color: whitesmoke;
+     }
+
+   </style>
+   <style type="text/css">
+    .tg  {border-collapse:collapse;border-spacing:0; color:  black;}
+    .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+    .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+    .tg .tg-z0iz{background-color:#fffc9e;text-align:left;vertical-align:top}
+    .tg .tg-yofg{background-color:#9aff99;text-align:left;vertical-align:top}
+    .tg .tg-i49k{background-color:#ffce93;text-align:left;vertical-align:top}
+    .tg .tg-w747{background-color:#dae8fc;text-align:left;vertical-align:top}
+    .tg .tg-hyan{background-color:#34cdf9;text-align:left;vertical-align:top}
+    .tg .tg-ikmv{background-color:#cbcefb;text-align:left;vertical-align:top}
+    .tg .tg-ltxa{background-color:#ffccc9;text-align:left;vertical-align:top}
+    div {
+  width: 300px;
+  border: 15px solid black;
+  padding: 50px;
+  margin: 20px;
+}
+    #cf {
+      position:relative;
+      height:281px;
+      width:450px;
+      margin:0 auto;
+    }
+
+    #cf img {
+      max-width:100%;
+      max-height:100%;
+      position:absolute;
+      left:0;
+      -webkit-transition: opacity 1s ease-in-out;
+      -moz-transition: opacity 1s ease-in-out;
+      -o-transition: opacity 1s ease-in-out;
+      transition: opacity 1s ease-in-out;
+    }
+
+    #cf img.top:hover {
+      opacity:0;
+    }
+    </style>
+   <body>
+       <h1>About Me</h1>
+        <div>
+          <p>Hi, my name is Hunter Newton. I am a Computer Science student at UHD. I like to play League of Legends when I am not busy with school or work. In addition, I 
+              enjoy doing yoga and jiu jitsu. This semester I began an internship at a robotics company, where I will be working on computer vision. I also enjoy web 
+              development, and look forward to learning a lot in this class! I am not very good at talking about myself, two hundred words seems like so much! I guess my 
+              favority programming language is python, which I used in my software engineering class to make a blackboard clone website. Specifically I used the flask 
+              framework to do so, with a SQL database. It was very nice because instead of writing out all the HTML, flask uses jinja to render templates!
+          </p>
+        </div>
+        <div>
+          <h2>here is a picture of a robot!</h2>
+          <div id="cf">
+            <!-- <img class="bottom" src="spot_mini.jpg"> -->
+            <img src="donkey-car.jpg">
+          </div>
+        </div>
+       <div>
+       <p>Check out <a href="https://ehunternewton.github.io/tower-defense/">this game</a> I made in my summer class using HTML and JavaScript!</p>
+       </div>
+       <div>
+       <h3>Tell me about yourself</h3>
+       <form method = "post" action = "http://www.deitel.com">
+        <p>
+           <label>what is your favorite color??
+              <input type = "color" autofocus /> 
+           </label>
+        </p>
+        <p>
+          <label>what is your favorite programming language?<br>
+            <input type="radio" name="fav" value="Python">Python<br>
+            <input type="radio" name="fav" value="C++">C++<br>
+            <input type="radio" name="fav" value="JavaScript">JavaScript<br>
+            <input type="radio" name="fav" value="Java">Java<br>
+            <input type="radio" name="fav" value="Other">Other<br>
+          </label>
+        </p>
+        <p>
+          <label>If other, let me know what your favorite language is!<br>
+            <input type="text"></label>
+        </p>
+        <p>
+          <input type = "submit" value = "Submit" />
+          <input type = "reset" value = "Clear" />
+       </p> 
+      </form>
+       </div>
+       <div>
+       <h3>This is my schedule for Fall 2019</h3>
+       
+       
+        <table class="tg">
+          <tr>
+            <th class="tg-z0iz">Monday</th>
+            <th class="tg-z0iz">Tuesday</th>
+            <th class="tg-z0iz">Wednesday</th>
+            <th class="tg-z0iz">Thursday</th>
+            <th class="tg-z0iz">Friday</th>
+            <th class="tg-z0iz">Sat</th>
+            <th class="tg-z0iz">Sun</th>
+          </tr>
+          <tr>
+            <td class="tg-ltxa" rowspan="4">Work <br>9:00 - 5:00</td>
+            <td class="tg-yofg">Web Dev<br>11:30 - 12:45</td>
+            <td class="tg-ltxa">Work <br>9:00 - 12:00</td>
+            <td class="tg-yofg">Web Dev<br>11:30 - 12:45</td>
+            <td class="tg-ltxa" rowspan="4">Work <br>9:00 - 5:00</td>
+            <td class="tg-w747" colspan="2" rowspan="4">Homework/<br><span style="font-weight:bold">SLEEP</span></td>
+          </tr>
+          <tr>
+            <td class="tg-ikmv">Senior Seminar<br>1:00 - 2:15</td>
+            <td class="tg-i49k">Programming <br>Language Concepts<br>1:00 - 2:15</td>
+            <td class="tg-w747" rowspan="2">Break/<br>naptime</td>
+          </tr>
+          <tr>
+            <td class="tg-ltxa" rowspan="2">Work <br>3:00 - 6:00</td>
+            <td class="tg-ltxa" rowspan="2">Work <br>3:00 - 6:00</td>
+          </tr>
+          <tr>
+            <td class="tg-hyan">Operating <br>Systems <br>4:00 - 5:15</td>
+          </tr>
+        </table>    
+        </div>
+    </body>
+</html>
