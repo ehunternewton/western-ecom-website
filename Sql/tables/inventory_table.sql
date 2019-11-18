@@ -48,10 +48,7 @@ CREATE TABLE `inventory`
 -- Dumping data for table `inventory`
 --
 
-INSERT INTO `inventory` (`
-id`,
-`itemName
-`, `price`, `department`, `pictureID`) VALUES
+INSERT INTO `inventory` (`id`,`itemName`, `price`, `department`, `pictureID`) VALUES
 (1, 'Pato Tang', 40, 'Men', ''),
 (2, 'Honey Nilo Croc', 50, 'Men', ''),
 (3, 'Papaya Star', 50, 'Men', ''),
