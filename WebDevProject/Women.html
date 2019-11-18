@@ -69,7 +69,7 @@
 </nav>
 
 <body>
-
+<form action="./PHP/item_display.php" method="post">
 <div class="container">    
   <div class="row">
     <div class="col-sm-4">
@@ -77,10 +77,9 @@
         <div class="panel-heading">Cactus Brown</div>
         <div class="panel-body"><img src="img/Cactus_Brown.JPG" class="center" alt="Cactus Brown" width="275" height="325"></div>
         <div class="panel-footer">
-            <form action="./PHP/item_display.php" method="post">
-                <input type="submit" name="b1" id="test" value="View" /><br/>
-            </form>
-            <!-- <button type="button" class="btn btn-primary">View</button> -->
+          <!-- <form action="./PHP/item_display.php" method="post"> -->
+                <input type="submit" name="b1" id="test" class="btn btn-primary" value="View" /><br/>
+           
         </div>
       </div>
     </div>
@@ -89,7 +88,8 @@
         <div class="panel-heading">Crystal Flower</div>
         <div class="panel-body"><img src="img/Crystal_Flower.JPG" class="center" alt="Crystal Flower" width="270" height="325"></div>
         <div class="panel-footer">
-            <button type="button" class="btn btn-primary">View</button>
+            <!-- <button type="button" class="btn btn-primary">View</button> -->
+            <input type="submit" name="b2" id="test" class="btn btn-primary" value="View" /><br/>
         </div>
       </div>
     </div>
@@ -98,7 +98,8 @@
         <div class="panel-heading">Honey Flower</div>
         <div class="panel-body"><img src="img/Flower_Honey.JPG" class="center" alt="Honey Flower" width="270" height="325"></div>
         <div class="panel-footer">
-            <button type="button" class="btn btn-primary">View</button>
+            <!-- <button type="button" class="btn btn-primary">View</button> -->
+            <input type="submit" name="b3" id="test" class="btn btn-primary" value="View" /><br/>
         </div>
       </div>
     </div>
@@ -111,15 +112,20 @@
       <div class="panel panel-primary">
         <div class="panel-heading">Flower Honey Brown</div>
         <div class="panel-body"><img src="img/Flower_HoneyBrown.JPG" class="center" alt="Flower Honey Brown" width="270" height="325"></div>
-        <div class="panel-footer"></div>
+        <div class="panel-footer">
+          <input type="submit" name="b3" id="test" class="btn btn-primary" value="View" /><br/>
+        </div>
+        
       </div>
     </div>
     <div class="col-sm-4"> 
       <div class="panel panel-primary">
         <div class="panel-heading">Hojitas</div>
         <div class="panel-body"><img src="img/Leafs_Brown.JPG" class="center" alt="Hojitas" width="270" height="325"></div>
-        <div class="panel-footer"></div>
+        <div class="panel-footer"><input type="submit" name="b3" id="test" class="btn btn-primary" value="View" /><br/>
+        </div>
       </div>
     </div>
+  </form>
 </body>
 </html>
