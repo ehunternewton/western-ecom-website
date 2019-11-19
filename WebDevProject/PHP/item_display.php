@@ -18,18 +18,20 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-if (isset($_POST['b1'])) {
+if (isset($_POST['btn'])) {
+    $val = $_POST['btn'];
+    $id = (int)$val;
     //  require_once('db_fns.php');
-    echo "This is Button1 that is selected";
+    echo "This is Button $id that is selected";
 
-    $sql    = "SELECT id, itemName, price, department FROM inventory WHERE id = 1";
+    $sql    = "SELECT id, itemName, price, department FROM inventory WHERE id = $id";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
         // output data of each row
         echo "</br>";
         while ($row = $result->fetch_assoc()) {
-            echo "id: " . $row["id"] . " - Name: " . $row["itemName"] . " " . $row["price"] . " " . $row["department"] . "<br>";
+            echo "id: " . $row["id"] . " - Name: " . $row["itemName"] . " - Price: $" . $row["price"] . " Dept: " . $row["department"] . "<br>";
         }
     } else {
         echo "0 results";
@@ -38,11 +40,8 @@ if (isset($_POST['b1'])) {
     $conn->close();
 
 }
-if (isset($_POST['b2'])) {
-    echo "This is Button2 that is selected";
-}
-
 ?>
+
 
 
 
