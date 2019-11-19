@@ -81,16 +81,34 @@ if (isset($_POST['btn'])) {
     $val = $_POST['btn'];
     $id = (int)$val;
     //  require_once('db_fns.php');
-    echo "This is Button $id that is selected";
+    // echo "This is Button $id that is selected";
 
-    $sql    = "SELECT id, itemName, price, department FROM inventory WHERE id = $id";
+    $sql    = "SELECT id, itemName, price, department, pictureID FROM inventory WHERE id = $id";
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
         // output data of each row
         echo "</br>";
         while ($row = $result->fetch_assoc()) {
-            echo "id: " . $row["id"] . " - Name: " . $row["itemName"] . " - Price: $" . $row["price"] . " Dept: " . $row["department"] . "<br>";
+          // echo "<div class = container>
+          //         id: " . $row["id"] . " - Name: " . $row["itemName"] . " - Price: $" . $row["price"] . " Dept: " . $row["department"] . "<br>
+          //       </div>";
+          echo "<div class = \"container\">";
+            echo "<div class = \"row\">";
+              echo "<div class = \"col-lg-12\">";
+                echo "<div class=\"panel panel-primary\">";
+                  echo "<div class=\"panel-heading\">" . $row["itemName"] . "</div>";
+                  echo "<div class=\"panel-body\">";
+                    echo "<img class=\"img-responsive\" src=\"" . $row["pictureID"] . "\" class=\"center\" alt=\"Pato Tang\">";
+                  echo "</div>";
+                  echo "<div class=\"panel-footer\">";
+                    echo "<p align=\"center\">Price: $" . $row["price"];
+                  echo "</div>";
+                echo "</div>";
+              echo "</div>";
+            echo "</div>";
+          echo "</div>";
+            // echo "id: " . $row["id"] . " - Name: " . $row["itemName"] . " - Price: $" . $row["price"] . " Dept: " . $row["department"] . "<br>";
         }
     } else {
         echo "0 results";
