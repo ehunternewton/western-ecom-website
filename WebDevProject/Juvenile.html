@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src='js/img-animate.js' type="text/javascript"></script>
   <style>
     /* Remove the navbar's default rounded borders and increase the bottom margin */ 
     .navbar {
@@ -25,19 +26,38 @@
       background-color: #f2f2f2;
       padding: 25px;
     }
+
+      
+
 	img {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
   </style>
+<script>
+  $(document).ready(function() {
+          var imageLinks = $('a[href$=".JPG"]');
+          if (imageLinks.children('img').length) {
+              imageLinks.children('img').each(function() {
+                  var currentTitle = $(this).attr('title');
+                  $(this).attr('title', currentTitle + ' (click to enlarge image)');
+              });
+              imageLinks.hover(function(e) {
+                  e.preventDefault();
+                  $(this).children('img').toggleClass('expanded');
+              });
+          }
+      });
+  </script>
+
 </head>
 <body>
 
   <div class="jumbotron">
     <div class="container text-center">
       <h1 class="text-left">Western Wear Store</h1>      
-      <p class="text-right">Boots for The Family</p>
+      <p class="TextPos">Boots for The Family</p>
     </div>
   </div>
 
@@ -73,7 +93,7 @@
     <div class="col-sm-4">
       <div class="panel panel-primary">
         <div class="panel-heading">Honey Crocodile</div>
-        <div class="panel-body"><img class="img-responsive" src="img/HoneyCrocJuvi.JPG" class="center" alt="Honey Croc"></div>
+        <a class="panel-body" href="img/HoneyCrocJuvi.JPG"><img class="img-responsive" src="img/HoneyCrocJuvi.JPG" class="center" alt="Honey Croc"></a>
         <div class="panel-footer">
           <!-- This button post to PHP -->
           <button type="submit" name="btn" id="test" class="btn btn-primary b1" value="11">View</button><br/>
@@ -83,7 +103,7 @@
     <div class="col-sm-4"> 
       <div class="panel panel-primary">
         <div class="panel-heading">Crazy Papaya</div>
-        <div class="panel-body"><img class="img-responsive" src="img/Crazy_Papaya.JPG" class="center" alt="Papaya"></div>
+        <a class="panel-body" href="img/Crazy_Papaya.JPG"><img class="img-responsive" src="img/Crazy_Papaya.JPG" class="center" alt="Papaya"></a>
         <div class="panel-footer">
           <!-- This button post to PHP -->
           <button type="submit" name="btn" id="test" class="btn btn-primary b1" value="12">View</button><br/>
@@ -93,7 +113,7 @@
     <div class="col-sm-4"> 
       <div class="panel panel-primary">
         <div class="panel-heading">Pirarucu Cognac</div>
-        <div class="panel-body"><img class="img-responsive" src="img/Pirarucu_Brick.JPG" class="center" alt="Pirarucu Cognac"></div>
+        <a class="panel-body" href="img/Pirarucu_Brick.JPG"><img class="img-responsive" src="img/Pirarucu_Brick.JPG" class="center" alt="Pirarucu Cognac"></a>
         <div class="panel-footer">
           <!-- This button post to PHP -->
           <button type="submit" name="btn" id="test" class="btn btn-primary b1" value="13">View</button><br/>
@@ -108,7 +128,7 @@
     <div class="col-sm-4">
       <div class="panel panel-primary">
         <div class="panel-heading">Star Cognac</div>
-        <div class="panel-body"><img class="img-responsive" src="img/Star_Cognac.JPG" class="center" alt="Star Cognac"></div>
+        <a class="panel-body" href="img/Star_Cognac.JPG"><img class="img-responsive" src="img/Star_Cognac.JPG" class="center" alt="Star Cognac"></a>
         <div class="panel-footer">
           <!-- This button post to PHP -->
           <button type="submit" name="btn" id="test" class="btn btn-primary b1" value="14">View</button><br/>
@@ -118,7 +138,7 @@
     <div class="col-sm-4"> 
       <div class="panel panel-primary">
         <div class="panel-heading">Texas Cognac</div>
-        <div class="panel-body"><img class="img-responsive" src="img/Texas_Cognac.JPG" class="center" alt="Texas Cognac"></div>
+        <a class="panel-body" href="img/Texas_Cognac.JPG"><img class="img-responsive" src="img/Texas_Cognac.JPG" class="center" alt="Texas Cognac"></a>
         <div class="panel-footer">
           <!-- This button post to PHP -->
           <button type="submit" name="btn" id="test" class="btn btn-primary b1" value="15">View</button><br/>
