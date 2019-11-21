@@ -1,0 +1,26 @@
+body {
+  background-color: beige;
+
+}
+
+
+/* #giffy {
+  width: 200px;
+  height: 200px;
+  animation-name: bunny;
+  animation-duration: 10s;
+}
+@media screen and (min-width: 600px) {
+  body {
+    background-color: lightskyblue;
+  }
+}
+
+@keyframes bunny {
+  from {
+    background-color: red;
+  }
+  to {
+    background-color: yellow;
+  }
+} */
