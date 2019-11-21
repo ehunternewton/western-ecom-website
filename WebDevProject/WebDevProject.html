@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="style.css">  
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src='js/img-animate.js' type="text/javascript"></script>
   <style>
     /* Remove the navbar's default rounded borders and increase the bottom margin */ 
     .navbar {
@@ -24,18 +25,50 @@
     .jumbotron p {
       margin-bottom: 7%;
     }
+
    
     /* Add a gray background color and some padding to the footer */
     footer {
       background-color: #252020;
       padding: 25px;
     }
-	img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
+    img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    }
+
   </style>
+
+<script>
+$(document).ready(function() {
+        var imageLinks = $('a[href$=".JPG"]');
+        if (imageLinks.children('img').length) {
+            imageLinks.children('img').each(function() {
+                var currentTitle = $(this).attr('title');
+                $(this).attr('title', currentTitle + ' (click to enlarge image)');
+            });
+            imageLinks.hover(function(e) {
+                e.preventDefault();
+                $(this).children('img').toggleClass('expanded');
+            });
+        }
+    });
+ 
+$(".panel-body").click(function(){
+     $("img-responsive").css("z-index", 40);
+  });
+
+</script>
+<!--
+<script>
+  document.getElementByClassName("panel-body").addEventListener("click", bringToFront)
+
+  function bringToFront(img) {
+    img.style.zIndex = "10";
+}
+  </script>
+  -->
 </head>
 <body>
 
@@ -45,7 +78,7 @@
         <!-- <h1 class="text-left" >Western Wear Store</h1>      
         <p class="text-right">Boots for The Family</p> -->
         <h1 class="text-left">Western Wear Store</h1>      
-        <p class="text-right">Boots for The Family</p>
+        <p class="TextPos">Boots for The Family</p>
     </div>
     
   </div>
@@ -82,7 +115,7 @@
     <div class="col-sm-4 panel1">
       <div class="panel panel-primary">
         <div class="panel-heading">Mens Best Seller!</div>
-        <div class="panel-body"><img class="img-responsive" src="img/Pato_Tang.JPG" class="center" alt="Pato Tang"></div>
+        <a class="panel-body" href="img/Pato_Tang.JPG"><img class="img-responsive" src="img/Pato_Tang.JPG" class="center" alt="Pato Tang"></a>
         <div class="panel-footer">
           <!-- This button post to PHP -->
           <button type="submit" name="btn" id="test" class="btn btn-primary b1" value="1">View</button><br/></div>
@@ -91,7 +124,7 @@
     <div class="col-sm-4 pon2"> 
       <div class="panel panel-primary">
         <div class="panel-heading">Womens Best Seller!</div>
-        <div class="panel-body"><img class="img-responsive" src="img/Crystal_Flower.JPG" class="center" alt="Crystal Flower"></div>
+        <a class="panel-body" href="img/Crystal_Flower.JPG"><img class="img-responsive" src="img/Crystal_Flower.JPG" class="center" alt="Crystal Flower"></a>
         <div class="panel-footer">
           <!-- This button post to PHP -->
           <button type="submit" name="btn" id="test" class="btn btn-primary b1" value="7">View</button><br/>
@@ -101,7 +134,7 @@
     <div class="col-sm-4" id = "pon3"> 
       <div class="panel panel-primary">
         <div class="panel-heading">Juvenile Best Seller!</div>
-        <div class="panel-body"><img class="img-responsive" src="img/HoneyCrocJuvi.JPG" class="center" alt="Honey Croc"></div>
+        <a class="panel-body" href="img/Crystal_Flower.JPG"><img class="img-responsive" src="img/HoneyCrocJuvi.JPG" class="center" alt="Honey Croc"></a>
         <div class="panel-footer">
           <!-- This button post to PHP -->
           <button type="submit" name="btn" id="test" class="btn btn-primary b1" value="11">View</button><br/>
@@ -116,7 +149,7 @@
     <div class="col-sm-4 panel4">
       <div class="panel panel-primary">
         <div class="panel-heading">Toddlers Best Seller!</div>
-        <div class="panel-body"><img class="img-responsive" src="img/Longhorn_Brown_Toddler.JPG" class="center" alt="Longhorn Brown"></div>
+        <a class="panel-body" href="img/Crystal_Flower.JPG"><img class="img-responsive" src="img/Longhorn_Brown_Toddler.JPG" class="center" alt="Longhorn Brown"></a>
         <div class="panel-footer">
           <!-- This button post to PHP -->
           <button type="submit" name="btn" id="test" class="btn btn-primary b1" value="19">View</button><br/>
@@ -126,7 +159,7 @@
     <div class="col-sm-4 panel5"> 
       <div class="panel panel-primary">
         <div class="panel-heading">Newborns Best Seller!</div>
-        <div class="panel-body"><img class="img-responsive" src="img/Texas_Newborn.JPG" class="center" alt="Texas Newborn"></div>
+        <a class="panel-body" href="img/Crystal_Flower.JPG"><img class="img-responsive" src="img/Texas_Newborn.JPG" class="center" alt="Texas Newborn"></a>
         <div class="panel-footer">
           <!-- This button post to PHP -->
           <button type="submit" name="btn" id="test" class="btn btn-primary b1" value="16">View</button><br/>

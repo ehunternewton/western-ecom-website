@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src='js/img-animate.js' type="text/javascript"></script>
   <style>
     /* Remove the navbar's default rounded borders and increase the bottom margin */ 
     .navbar {
@@ -31,13 +32,29 @@
   margin-right: auto;
 }
   </style>
+<script>
+  $(document).ready(function() {
+          var imageLinks = $('a[href$=".JPG"]');
+          if (imageLinks.children('img').length) {
+              imageLinks.children('img').each(function() {
+                  var currentTitle = $(this).attr('title');
+                  $(this).attr('title', currentTitle + ' (click to enlarge image)');
+              });
+              imageLinks.hover(function(e) {
+                  e.preventDefault();
+                  $(this).children('img').toggleClass('expanded');
+              });
+          }
+      });
+  </script>
+
 </head>
 <body>
 
   <div class="jumbotron">
     <div class="container text-center">
       <h1 class="text-left">Western Wear Store</h1>      
-      <p class="text-right">Boots for The Family</p>
+      <p class="TextPos">Boots for The Family</p>
     </div>
   </div>
 
@@ -73,7 +90,7 @@
     <div class="col-sm-4">
       <div class="panel panel-primary">
         <div class="panel-heading">Pato Tang</div>
-        <div class="panel-body"><img class="img-responsive" src="img/Pato_Tang.JPG" class="center" alt="Pato Tang"></div>
+        <a class="panel-body" href="img/Pato_Tang.JPG"><img class="img-responsive" src="img/Pato_Tang.JPG" class="center" alt="Pato Tang"></a>
         <div class="panel-footer">
           <!-- This button post to PHP -->
           <button type="submit" name="btn" id="test" class="btn btn-primary b1" value="1">View</button><br/>
@@ -83,7 +100,7 @@
     <div class="col-sm-4"> 
       <div class="panel panel-primary">
         <div class="panel-heading">Honey Nilo Croc</div>
-        <div class="panel-body"><img class="img-responsive" src="img/HoneyCroc.JPG" class="center" alt="Honey Croc"></div>
+        <a class="panel-body" href="img/HoneyCroc.JPG"><img class="img-responsive" src="img/HoneyCroc.JPG" class="center" alt="Honey Croc"></a>
         <div class="panel-footer">
           <!-- This button post to PHP -->
           <button type="submit" name="btn" id="test" class="btn btn-primary b1" value="2">View</button><br/>
@@ -93,7 +110,7 @@
     <div class="col-sm-4"> 
       <div class="panel panel-primary">
         <div class="panel-heading">Papaya Star</div>
-        <div class="panel-body"><img class="img-responsive" src="img/Papaya_Star.JPG" class="center" alt="Papaya Star"></div>
+        <a class="panel-body" href="img/Papaya_Star.JPG"><img class="img-responsive" src="img/Papaya_Star.JPG" class="center" alt="Papaya Star"></a>
         <div class="panel-footer">
           <!-- This button post to PHP -->
           <button type="submit" name="btn" id="test" class="btn btn-primary b1" value="3">View</button><br/>
@@ -108,7 +125,7 @@
     <div class="col-sm-4">
       <div class="panel panel-primary">
         <div class="panel-heading">Braided</div>
-        <div class="panel-body"><img class="img-responsive" src="img/Trenzado_Black.JPG" class="center" alt="Trenzado Negro"></div>
+        <a class="panel-body" href="img/Trenzado_Black.JPG"><img class="img-responsive" src="img/Trenzado_Black.JPG" class="center" alt="Trenzado Negro"></a>
         <div class="panel-footer">
           <!-- This button post to PHP -->
           <button type="submit" name="btn" id="test" class="btn btn-primary b1" value="4">View</button><br/>
@@ -118,7 +135,7 @@
     <div class="col-sm-4"> 
       <div class="panel panel-primary">
         <div class="panel-heading">Longhorn</div>
-        <div class="panel-body"><img class="img-responsive" src="img/Longhorn_Black.JPG" class="center" alt="Longhorn"></div>
+        <a class="panel-body" href="img/Longhorn_Black.JPG"><img class="img-responsive" src="img/Longhorn_Black.JPG" class="center" alt="Longhorn"></a>
         <div class="panel-footer">
           <!-- This button post to PHP -->
           <button type="submit" name="btn" id="test" class="btn btn-primary b1" value="5">View</button><br/>

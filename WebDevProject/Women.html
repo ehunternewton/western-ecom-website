@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src='js/img-animate.js' type="text/javascript"></script>
   <style>
     /* Remove the navbar's default rounded borders and increase the bottom margin */ 
     .navbar {
@@ -31,13 +32,29 @@
   margin-right: auto;
 }
   </style>
+<script>
+  $(document).ready(function() {
+          var imageLinks = $('a[href$=".JPG"]');
+          if (imageLinks.children('img').length) {
+              imageLinks.children('img').each(function() {
+                  var currentTitle = $(this).attr('title');
+                  $(this).attr('title', currentTitle + ' (click to enlarge image)');
+              });
+              imageLinks.hover(function(e) {
+                  e.preventDefault();
+                  $(this).children('img').toggleClass('expanded');
+              });
+          }
+      });
+  </script>
+
 </head>
 <body>
 
   <div class="jumbotron">
     <div class="container text-center">
       <h1 class="text-left">Western Wear Store</h1>      
-      <p class="text-right">Boots for The Family</p>
+      <p class="TextPos">Boots for The Family</p>
     </div>
   </div>
 
@@ -73,7 +90,7 @@
     <div class="col-sm-4">
       <div class="panel panel-primary">
         <div class="panel-heading">Cactus Brown</div>
-        <div class="panel-body"><img class="img-responsive" src="img/Cactus_Brown.JPG" class="center" alt="Cactus Brown"></div>
+        <a class="panel-body" href="img/Cactus_Brown.JPG"><img class="img-responsive" src="img/Cactus_Brown.JPG" class="center" alt="Cactus Brown"></a>
         <div class="panel-footer">
          <!-- This button post to PHP -->
                 <button type="submit" name="btn" id="test" class="btn btn-primary b1" value="6">View</button><br/>
@@ -84,7 +101,7 @@
     <div class="col-sm-4"> 
       <div class="panel panel-primary">
         <div class="panel-heading">Crystal Flower</div>
-        <div class="panel-body"><img class="img-responsive" src="img/Crystal_Flower.JPG" class="center" alt="Crystal Flower"></div>
+        <a class="panel-body" href="img/Crystal_Flower.JPG"><img class="img-responsive" src="img/Crystal_Flower.JPG" class="center" alt="Crystal Flower"></a>
         <div class="panel-footer">
             <!-- This button post to PHP -->
             <button type="submit" name="btn" id="test" class="btn btn-primary b1" value="7">View</button><br/>
@@ -94,7 +111,7 @@
     <div class="col-sm-4"> 
       <div class="panel panel-primary">
         <div class="panel-heading">Honey Flower</div>
-        <div class="panel-body"><img class="img-responsive" src="img/Flower_Honey.JPG" class="center" alt="Honey Flower"></div>
+        <a class="panel-body" href="img/Flower_Honey.JPG"><img class="img-responsive" src="img/Flower_Honey.JPG" class="center" alt="Honey Flower"></a>
         <div class="panel-footer">
             <!-- This button post to PHP -->
             <button type="submit" name="btn" id="test" class="btn btn-primary b1" value="8">View</button><br/>
@@ -109,7 +126,7 @@
     <div class="col-sm-4">
       <div class="panel panel-primary">
         <div class="panel-heading">Flower Honey Brown</div>
-        <div class="panel-body"><img class="img-responsive" src="img/Flower_HoneyBrown.JPG" class="center" alt="Flower Honey Brown"></div>
+        <a class="panel-body" href="img/Flower_HoneyBrown.JPG"><img class="img-responsive" src="img/Flower_HoneyBrown.JPG" class="center" alt="Flower Honey Brown"></a>
         <div class="panel-footer">
           <!-- This button post to PHP -->
           <button type="submit" name="btn" id="test" class="btn btn-primary b1" value="9">View</button><br/>
@@ -120,7 +137,7 @@
     <div class="col-sm-4"> 
       <div class="panel panel-primary">
         <div class="panel-heading">Hojitas</div>
-        <div class="panel-body"><img class="img-responsive" src="img/Leafs_Brown.JPG" class="center" alt="Hojitas"></div>
+        <a class="panel-body" href="img/Leafs_Brown.JPG"><img class="img-responsive" src="img/Leafs_Brown.JPG" class="center" alt="Hojitas"></a>
         <div class="panel-footer">
           <!-- This button post to PHP -->
           <button type="submit" name="btn" id="test" class="btn btn-primary b1" value="10">View</button><br/>
